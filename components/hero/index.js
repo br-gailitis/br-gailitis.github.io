@@ -23,7 +23,8 @@ export class HeroSection extends LitElement {
 
       ::slotted([slot=attachment]) {
         grid-area: attachment;
-        border-radius: 5rem
+        border-radius: 5rem;
+        width: 100%;
       }
 
       ::slotted([slot=title]) {
@@ -39,6 +40,19 @@ export class HeroSection extends LitElement {
       ::slotted([slot=description]) {
         grid-area: body;
         font-size: 1rem;
+      }
+
+      @media (max-width:1000px)  {
+        :host {
+          grid-template-areas: 'attachment' 'content';
+          gap: 2rem;
+        }
+
+        ::slotted([slot=attachment]) {
+          grid-area: attachment;
+          border-radius: 5rem;
+          max-width: 250px;
+        }
       }
     `
   ]
