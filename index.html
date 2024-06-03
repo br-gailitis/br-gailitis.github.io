@@ -3,9 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/base.css">
+  <link rel="stylesheet" href="./style/layout.css">
+  <script src="components/index.js" type="module"></script>
   <title>B. Gailītis Portfolio</title>
 </head>
 <body>
-  <h1>B. Gailītis</h1>
+  <nav class="header-nav">
+    <bg-navigation logo="assets/bg-logo.svg">
+      <h1 slot="title">B. Gailītis</h1>
+      <img slot="logo" src="assets/bg-logo.svg" >
+      <button slot="trigger" class="hamburger">Menu</button>
+      <div slot="menu">
+        <a href="/">Home</a>
+        <a href="/">Work</a>
+        <a href="/">About</a>
+      </div>
+    </bg-navigation>
+  </nav>
+  <main>
+    <section class="hero">
+      <bg-hero-section>
+          <h1 slot="title">Broks Randolfs Gailītis</h1>
+          <h2 slot="subtitle">
+            UX Developer & Manager
+          </h2>
+          <p slot="description">
+            Over twenty years of hands-on experience dedicated to driving innovation, optimizing processes,
+            and leading high-performance teams to deliver exceptional user-focused software solutions that
+            efficiently achieve business objectives.
+          </p>
+          <img slot="attachment" src="assets/profile-image.jpg" />
+      </div>
+    </bg-hero-section>
+  </main>
 </body>
 </html>

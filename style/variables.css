@@ -1,0 +1,13 @@
+:root {
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+  --font-base: normal var(--font-weight-regular) 1rem / 1 "Poppins", sans-serif;
+
+  --color-fg-rgb: 26, 26, 31;
+  --color-fg: rgb(var(--color-fg-rgb));
+
+  --gap-1: 0.1em;
+
+  --nav-height: 100px;
+}
