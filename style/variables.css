@@ -7,7 +7,9 @@
   --color-fg-rgb: 26, 26, 31;
   --color-fg: rgb(var(--color-fg-rgb));
 
-  --gap-1: 0.1em;
+  --gap-1: 0.1rem;
+  --gap-2: 0.5rem;
+  --gap-3: 1rem;
 
   --nav-height: 100px;
 }

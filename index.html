@@ -25,37 +25,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style/base.css">
   <link rel="stylesheet" href="/style/layout.css">
-  <script src="/components/index.js" type="module"></script>
+  <script src="/lib/components/index.js" type="module"></script>
   <title>B. Gailītis Portfolio</title>
 </head>
 <body>
   <header class="header-nav">
-    <bg-navigation logo="assets/bg-logo.svg">
-      <a href="/" slot="title">B. Gailītis</a>
-      <img slot="logo" src="/assets/bg-logo.svg" >
+    <bg-navbar logo="/assets/bg-logo.svg" home="/">
+      <h1 slot="title">B. Gailītis</h1>
       <button slot="trigger" class="hamburger">Menu</button>
       <nav slot="menu">
-        <a href="/">Home</a>
-        <a href="/">Work</a>
-        <a href="/en/about.html">About</a>
+        <bg-navbar-menu>
+          <a href="/">Home</a>
+          <a href="/">Work</a>
+          <a href="/en/about.html">About</a>
+          <a href="/">Contact</a>
+        </bg-navbar-menu>
       </nav>
-    </bg-navigation>
+    </bg-navbar>
   </header>
   <main>
     <section class="hero">
-      <bg-hero-section>
-          <h1 slot="title">Broks Randolfs Gailītis</h1>
-          <h2 slot="subtitle">
-            UX Developer & Manager
-          </h2>
-          <p slot="description">
-            Over twenty years of hands-on experience dedicated to driving innovation, optimizing processes,
-            and leading high-performance teams to deliver exceptional user-focused software solutions that
-            efficiently achieve business objectives.
-          </p>
-          <img slot="attachment" src="assets/profile-image.jpg" />
+      <bg-hero>
+        <h1 slot="title">Broks Randolfs Gailītis</h1>
+        <h2 slot="subtitle">
+          UX Developer & Manager
+        </h2>
+        <p slot="description">
+          Over twenty years of hands-on experience dedicated to driving innovation, optimizing processes,
+          and leading high-performance teams to deliver exceptional user-focused software solutions that
+          efficiently achieve business objectives.
+        </p>
+        <img slot="attachment" src="assets/profile-image.jpg" alt="Photo of Broks Randolfs Gailītis" />
       </div>
-    </bg-hero-section>
+    </bg-hero>
   </main>
 </body>
 </html>
