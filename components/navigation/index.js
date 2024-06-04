@@ -1,4 +1,5 @@
-import {LitElement, html, css, createRef, ref} from 'https://cdn.jsdelivr.net/gh/lit/dist@3/all/lit-all.min.js';
+import {LitElement, html, css } from 'lit';
+import { createRef, ref } from 'lit/directives/ref.js';
 
 export class Navigation extends LitElement {
 
@@ -8,10 +9,18 @@ export class Navigation extends LitElement {
     css`
       :host {
         display: grid;
-        grid-template-columns: 3rem auto min-content;
+        grid-template-columns: 3rem max-content auto;
         align-items: center;
         gap: 1rem;
         height: 100%;
+        --nav-menu-width: 500px;
+      }
+
+      ::slotted([slot=title]) {
+        text-decoration: none;
+        color: var(--color-fg);
+        font-weight: var(--font-weight-bold);
+        font-size: 1.5rem
       }
 
       ::slotted([slot=logo]) {
@@ -26,12 +35,17 @@ export class Navigation extends LitElement {
         font-size: 2rem;
       }
 
+      ::slotted([slot=trigger]) {
+        display: flex;
+        justify-content: flex-end;
+      }
+
       dialog {
         box-sizing: border-box;
         margin: 0;
         border: 0;
-        left: calc(100% - 500px);
-        width: 500px;
+        left: calc(100% - var(--nav-menu-width));
+        width: var(--nav-menu-width);
         height: 100%;
         max-height: 100vh;
       }
@@ -51,6 +65,14 @@ export class Navigation extends LitElement {
       #closeButton::before, #closeButton::after {
         content: '';
         position: absolute;
+      }
+
+      @media (max-width:600px)  {
+        dialog {
+          left:0;
+          width: 100%;
+          max-width: 100%;
+        }
       }
     `
   ]
