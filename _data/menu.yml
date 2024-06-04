@@ -18,10 +18,10 @@ lv:
     url: /lv/
     topnav: false
   work:
-    name: Lietas
+    name: Projekti
     url: /lv/projects/
   about:
-    name: Par Broks
+    name: Par Broku
     url: /lv/about/
   contact:
     name: Sazinieties
