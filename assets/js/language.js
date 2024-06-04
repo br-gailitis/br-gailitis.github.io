@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (path.startsWith(`/${language}/`)) return;
 
   const redirectToLanguage = (lang) => {
-    window.location.href = path.replace(/^\/([A-Za-z]{2}\/)|\//, `/${lang}/`);
+    // window.location.href = path.replace(/^\/([A-Za-z]{2}\/)|\//, `/${lang}/`);
   }
 
   switch (language) {

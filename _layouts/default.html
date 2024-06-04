@@ -23,29 +23,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style/base.css">
-  <link rel="stylesheet" href="/style/layout.css">
-  <script src="/lib/language.js"></script>
-  <script src="/lib/components/index.js" type="module"></script>
-  <title>B. Gailītis Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <script src="/assets/js/language.js"></script>
+  <script src="/assets/js/components/index.js" type="module"></script>
+  <title>{{ page.title }}</title>
 </head>
 <body>
-  <header class="header-nav">
-    <bg-navbar logo="/assets/bg-logo.svg" home="/">
-      <h1 slot="title">B. Gailītis</h1>
-      <button slot="trigger" class="hamburger">Menu</button>
-      <nav slot="menu">
-        <bg-navbar-menu>
-          <a href="/">Work</a>
-          <a href="/en/about.html">About</a>
-          <a href="/">Contact</a>
-        </bg-navbar-menu>
-        <br>
-        <button onclick="event.preventDefault(); window.sessionStorage.setItem('language', 'lv');window.location.reload();">LV</button>
-        <button onclick="event.preventDefault(); window.sessionStorage.setItem('language', 'en');window.location.reload();">EN</button>
-      </nav>
-    </bg-navbar>
-  </header>
+  {% include header.html %}
   <main>
     <section class="hero">
       <bg-hero>
@@ -56,7 +41,7 @@
           <p slot="description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab officia natus debitis culpa illo blanditiis ducimus, nobis atque minus fugit aperiam consequatur, nostrum placeat incidunt quisquam aut quibusdam sapiente dolores.
           </p>
-          <img slot="attachment" src="/assets/profile-image.jpg" />
+          <img slot="attachment" src="/assets/img/profile-image.jpg" />
       </div>
     </bg-hero>
   </main>

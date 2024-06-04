@@ -37,6 +37,7 @@ export class NavigationBar extends LitElement {
         color: var(--color-fg);
         font-weight: var(--font-weight-bold);
         font-size: 1.5rem;
+        white-space: nowrap;
       }
 
       #items {
