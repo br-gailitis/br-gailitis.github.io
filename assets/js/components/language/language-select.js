@@ -40,7 +40,7 @@ export class LanguageSelect extends LitElement {
   }
 
   getRegionalLanguageName(lang) {
-    return new Intl.DisplayNames(this.currentLanguage, { type: 'language' }).of(lang);
+    return new Intl.DisplayNames(lang, { type: 'language' }).of(lang);
   }
 
   render() {

@@ -1,17 +1,17 @@
 
 <header class="header-nav">
-  <bg-navbar logo="/assets/img/bg-logo.svg" home="/">
+  <bg-navbar logo="/assets/img/bg-logo.svg" home="{{ site.data.menu[page.lang].home.url }}">
     <h1 slot="title">B. Gailītis</h1>
     <button slot="trigger" class="hamburger">Menu</button>
     <nav slot="menu">
       <bg-navbar-menu>
-        <a href="/">Work</a>
-        <a href="/en/about.html">About</a>
-        <a href="/en/contact.html">Contact</a>
+        {% for item in site.data.menu[page.lang] %}
+        {% if item[1].topnav != false %}
+        <a href="{{ item[1].url }}">{{ item[1].name }}</a>
+        {% endif %}
+        {% endfor %}
+        <bg-language-select languages='["lv","en"]'></bg-language-select>
       </bg-navbar-menu>
-      <br>
-      <button onclick="event.preventDefault(); window.sessionStorage.setItem('language', 'lv');window.location.reload();">LV</button>
-      <button onclick="event.preventDefault(); window.sessionStorage.setItem('language', 'en');window.location.reload();">EN</button>
     </nav>
   </bg-navbar>
 </header>

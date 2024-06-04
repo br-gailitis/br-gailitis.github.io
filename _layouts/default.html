@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{page.lang}}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <script src="/assets/js/language.js"></script>
   <script src="/assets/js/components/index.js" type="module"></script>
@@ -32,18 +32,7 @@
 <body>
   {% include header.html %}
   <main>
-    <section class="hero">
-      <bg-hero>
-          <h1 slot="title">Testing about page</h1>
-          <h2 slot="subtitle">
-            Enough about me
-          </h2>
-          <p slot="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab officia natus debitis culpa illo blanditiis ducimus, nobis atque minus fugit aperiam consequatur, nostrum placeat incidunt quisquam aut quibusdam sapiente dolores.
-          </p>
-          <img slot="attachment" src="/assets/img/profile-image.jpg" />
-      </div>
-    </bg-hero>
+    {{ content }}
   </main>
 </body>
 </html>

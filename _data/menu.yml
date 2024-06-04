@@ -1,0 +1,28 @@
+en:
+  home:
+    name: Home
+    url: /en/
+    topnav: false
+  work:
+    name: Work
+    url: /en/projects/
+  about:
+    name: About
+    url: /en/about/
+  contact:
+    name: Contact
+    url: /en/contact/
+lv:
+  home:
+    name: Mājas
+    url: /lv/
+    topnav: false
+  work:
+    name: Lietas
+    url: /lv/projects/
+  about:
+    name: Par Broks
+    url: /lv/about/
+  contact:
+    name: Sazinieties
+    url: /lv/contact/

@@ -1,5 +1,7 @@
 ---
 title: Home sweet home
 layout: default
+lang: en
+permalink: /en/projects/
 ---
-I am the content
+i project
