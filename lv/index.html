@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,18 +27,18 @@
   <link rel="stylesheet" href="/style/layout.css">
   <script src="/lib/language.js"></script>
   <script src="/lib/components/index.js" type="module"></script>
-  <title>B. Gailītis Portfolio</title>
+  <title>Broka Randolfa Gailīša portfolio</title>
 </head>
 <body>
   <header class="header-nav">
     <bg-navbar logo="/assets/bg-logo.svg" home="/">
       <h1 slot="title">B. Gailītis</h1>
-      <button slot="trigger" class="hamburger">Menu</button>
+      <button slot="trigger" class="hamburger">Izvēlne</button>
       <nav slot="menu">
         <bg-navbar-menu>
-          <a href="/">Work</a>
-          <a href="/en/about.html">About</a>
-          <a href="/">Contact</a>
+          <a href="/">Portfolio</a>
+          <a href="/">Par Broks</a>
+          <a href="/">Sazinieties</a>
         </bg-navbar-menu>
         <br>
         <button onclick="event.preventDefault(); window.sessionStorage.setItem('language', 'lv');window.location.reload();">LV</button>
@@ -49,14 +49,16 @@
   <main>
     <section class="hero">
       <bg-hero>
-          <h1 slot="title">Testing about page</h1>
-          <h2 slot="subtitle">
-            Enough about me
-          </h2>
-          <p slot="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab officia natus debitis culpa illo blanditiis ducimus, nobis atque minus fugit aperiam consequatur, nostrum placeat incidunt quisquam aut quibusdam sapiente dolores.
-          </p>
-          <img slot="attachment" src="/assets/profile-image.jpg" />
+        <h1 slot="title">Broks Gailītis</h1>
+        <h2 slot="subtitle">
+          UX programmētājs un vadītājs
+        </h2>
+        <p slot="description">
+          Vairāk nekā divdesmit gadu praktiskā pieredze, kas veltīta inovāciju veicināšanai un procesu optimizācijai,
+          un augstas veiktspējas komandu vadīšana, lai radītu izcilus, uz lietotāju orientētus programmatūras risinājumus, kas
+          efektīvi sasniedz uzņēmējdarbības mērķus.
+        </p>
+        <img slot="attachment" src="/assets/profile-image.jpg" alt="Photo of Broks Randolfs Gailītis" />
       </div>
     </bg-hero>
   </main>
