@@ -2,7 +2,6 @@ en:
   home:
     name: Home
     url: /en/
-    topnav: false
   work:
     name: Work
     url: /en/projects/
@@ -16,7 +15,6 @@ lv:
   home:
     name: Mājas
     url: /lv/
-    topnav: false
   work:
     name: Projekti
     url: /lv/projects/

@@ -1,10 +1,10 @@
 form:
   firstName:
     en: First Name
-    lv: Vards
+    lv: Vārds
   lastName:
     en: Last Name
-    lv: Uzvards
+    lv: Uzvārds
   email:
     en: Email
     lv: E-pasts
