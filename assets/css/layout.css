@@ -6,6 +6,7 @@ section {
 
 section h1 {
   font-size: 3.75rem;
+  margin-bottom: 2.5rem;
 }
 
 @media (max-width: 1000px) {
