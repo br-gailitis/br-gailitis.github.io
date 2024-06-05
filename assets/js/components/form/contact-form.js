@@ -17,7 +17,6 @@ export class ContactForm extends LitElement {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 10px;
       }
 
       form.success {
@@ -51,7 +50,7 @@ export class ContactForm extends LitElement {
       }
 
       form {
-        gap: 1rem
+        gap: 2rem
       }
 
       label, button {
