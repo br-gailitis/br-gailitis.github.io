@@ -1,0 +1,43 @@
+form:
+  firstName:
+    en: First Name
+    lv: Vards
+  lastName:
+    en: Last Name
+    lv: Uzvards
+  email:
+    en: Email
+    lv: E-pasts
+  phone:
+    en: Phone
+    lv: Tālrunis
+  country:
+    en: Country
+    lv: Valsts
+  number:
+    en: Number
+    lv: Numurs
+  message:
+    en: Message
+    lv: Ziņa
+  fieldRequired:
+    en: required
+    lv: obligāts
+  typeEmail:
+    en: should contain email
+    lv: jābūt e-pasta adrese
+  typeNumeric:
+    en: should contain a number
+    lv: jābūt numurs
+  typeText:
+    en: should contain text
+    lv: jābūt teksts
+  unknownError:
+    en: An unknown error occurred
+    lv: Notika nezināma kļūda
+  fieldOptional:
+    en: Optional
+    lv: Nav obligāts
+  success:
+    en: Great success!
+    lv: Malacis!

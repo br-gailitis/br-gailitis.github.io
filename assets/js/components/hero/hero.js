@@ -64,12 +64,6 @@ export class HeroSection extends LitElement {
     `
   ]
 
-  static properties = {}
-
-  constructor() {
-    super();
-  }
-
   render() {
     return html`
       <header>

@@ -1,0 +1,46 @@
+<bg-contact-form
+  action="https://formspree.io/f/mrgnwogl"
+  method="POST"
+  data-error-required="{{ site.data.translations.form.fieldRequired[page.lang] }}"
+  data-error-email="{{ site.data.translations.form.typeEmail[page.lang] }}"
+  data-error-numeric="{{ site.data.translations.form.typeNumeric[page.lang] }}"
+  data-error-text="{{ site.data.translations.form.typeText[page.lang] }}"
+  data-error-unknown="{{ site.data.translations.form.unknownError[page.lang] }}"
+  data-field-optional="{{ site.data.translations.form.fieldOptional[page.lang] }}"
+  data-success="{{ site.data.translations.form.success[page.lang] }}"
+>
+  <input
+    type="text"
+    name="firstName"
+    value=""
+    required
+    data-label="{{ site.data.translations.form.firstName[page.lang] }}"
+    data-colspan="1"
+  >
+  <input
+    type="text"
+    name="lastName"
+    value=""
+    required
+    data-label="{{ site.data.translations.form.lastName[page.lang] }}"
+    data-colspan="1"
+  >
+  <input
+    type="email"
+    name="email"
+    required
+    value="brocgailit"
+    data-label="{{ site.data.translations.form.email[page.lang] }}"
+  >
+  <input
+    type="tel"
+    name="phone"
+    value=""
+    data-label="{{ site.data.translations.form.phone[page.lang] }}"
+  >
+  <textarea
+    name="message"
+    required
+    data-label="{{ site.data.translations.form.message[page.lang] }}"
+  ></textarea>
+</bg-contact-form>
