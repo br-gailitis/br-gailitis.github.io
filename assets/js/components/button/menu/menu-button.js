@@ -16,6 +16,7 @@ export class MenuButton extends LitElement {
         text-indent: -200vw;
         background: none;
         border: none;
+        cursor: pointer;
       }
 
       svg {
