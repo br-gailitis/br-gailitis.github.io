@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+const handleUserLanguage = () => {
 
   const path = window.location.pathname;
 
@@ -17,5 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     default:
       redirectToLanguage('en');
   }
+}
 
-});
+document.addEventListener("updatelanguage", handleUserLanguage);
+document.addEventListener("DOMContentLoaded", handleUserLanguage);

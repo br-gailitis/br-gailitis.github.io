@@ -5,17 +5,36 @@ export class LanguageSelect extends LitElement {
   static styles = [
     css`
       :host {
-        display: flex;
-        gap: 16px;
+        position: relative;
+        --icon-size: 1.75em;
+        --select-padding: 0.75em;
+        --select-height: 2.5rem;
       }
 
-      button {
-        border: 0;
-        background: rgba(0,0,0,0.1);
-        padding: 0.5em 1em;
-        height: 2rem;
-        border-radius: 0.5em;
+      :host, * {
+        font: var(--font-base);
+        font-size: var(--font-size-small);
+        line-height: 2;
       }
+
+      select {
+        border: 0;
+        background: rgba(var(--color-grey-rgb),0.1);
+        padding-left: calc(var(--icon-size) + var(--select-padding) * 2);
+        padding-right: var(--select-padding);
+        height: var(--select-height);
+        border-radius: 0.5em;
+        appearance: none;
+      }
+
+      bg-icon {
+        position: absolute;
+        top: calc((var(--select-height) - var(--icon-size)) / 2);
+        left: var(--select-padding);
+        height: var(--icon-size);
+        width: var(--icon-size);
+      }
+
     `
   ]
 
@@ -32,7 +51,8 @@ export class LanguageSelect extends LitElement {
 
   selectLanguage(event) {
     window.sessionStorage.setItem('language', event.currentTarget.value);
-    window.location.reload();
+    // window.handleUserLanguage();
+    this.dispatchEvent(new Event('updatelanguage', { bubbles: true, composed: true }))
   }
 
   get currentLanguage() {
@@ -44,8 +64,20 @@ export class LanguageSelect extends LitElement {
   }
 
   render() {
-    return this.languages.map(lang => html`
-      <button @click="${this.selectLanguage}" value="${lang}">${this.getRegionalLanguageName(lang)}</button>
+    const options = this.languages.map(lang => html`
+      <option
+        .selected="${this.currentLanguage === lang}"
+        value="${lang}"
+      >
+        ${this.getRegionalLanguageName(lang)}
+      </option>
     `);
+
+    return html`
+      <select @change="${this.selectLanguage}">
+        ${options}
+      </select>
+      <bg-icon name="globe"></bg-icon>
+    `;
   }
 }

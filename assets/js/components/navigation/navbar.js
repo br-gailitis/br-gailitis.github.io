@@ -53,6 +53,7 @@ export class NavigationBar extends LitElement {
         width: var(--nav-menu-width);
         height: 100%;
         max-height: 100vh;
+        background-color: var(--color-bg);
       }
 
       bg-button-close {
@@ -100,7 +101,7 @@ export class NavigationBar extends LitElement {
 
     const menu = html`
       <slot name="trigger" @click="${this.openMenu}"></slot>
-      <dialog @click="${this.closeMenu}" ${ref(this.#menuRef)}>
+      <dialog @click="${this.handleDialogClick}" ${ref(this.#menuRef)}>
         <slot name="menu"></slot>
         <bg-button-close @click="${this.closeMenu}">Close</bg-button-close>
       </dialog>

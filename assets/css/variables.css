@@ -2,8 +2,11 @@
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-bold: 600;
-  --font-base: normal var(--font-weight-regular) 1rem / 1 "Poppins", sans-serif;
 
+  --font-size-small: 12px;
+
+  --font-base: normal var(--font-weight-regular) 1rem / 1 "Poppins", sans-serif;
+  
   --color-fg-rgb: 26, 26, 31;
   --color-fg: rgb(var(--color-fg-rgb));
 
@@ -22,7 +25,10 @@
 
   --color-tertiary-rgb: 90, 166, 219;
   --color-tertiary: rgb(var(--color-tertiary-rgb));
-
+  
+  --color-grey-rgb: 64, 63, 66;
+  --color-grey: rgb(var(--color-muted-rgb));
+  
   --color-error-rgb: 229, 17, 63;
   --color-error: rgb(var(--color-error-rgb));
 
