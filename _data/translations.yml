@@ -46,6 +46,9 @@ form:
   fieldOptional:
     en: Optional
     lv: Nav obligāts
+  sendMessage:
+    en: Send Message
+    lv: Sūtīt ziņu
   success:
     en: Thanks! Your message has been received.
     lv: Paldies! Jūsu ziņa ir saņemts.

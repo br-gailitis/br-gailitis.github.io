@@ -248,7 +248,7 @@ export class ContactForm extends LitElement {
         class="${this.status === FormStatus.Success ? FormStatus.Success : ''}"
       >
         <input type="hidden" name="_language" value="${this.language}">
-        <button type="submit">Submit</button>
+        <button type="submit">${this.messages.sendMessage}</button>
       </form>
       <div id="success">
         ${this.messages.success}
