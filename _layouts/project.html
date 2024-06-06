@@ -2,6 +2,17 @@
 layout: default
 ---
 
-<a href="/{{ page.lang }}/projects/">{{ site.data.menu[page.lang].work.name }}</a> / {{ page.name }}
+<header class="page-header">
+  <div class="container">
+    <nav class="breadcrumbs">
+      <a href="/{{ page.lang }}/projects/">{{ site.data.menu[page.lang].work.name }}</a> / {{ page.name }}
+    </nav>
+    <h1 class="page-title">{{ page.title }}</h1>
+  </div>
+</header>
 
-{{ content }}
+<section>
+  <div class="container">
+    {{ content }}
+  </div>
+</section>

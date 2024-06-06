@@ -1,0 +1,35 @@
+ul.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+ul.project-list > li {
+  cursor: pointer;
+  border-radius: 1rem;
+  min-height: 250px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.5rem 2rem;
+  background-color: var(--color-bg);
+}
+
+ul.project-list > li:hover {
+  box-shadow: 0 0 2px rgba(var(--color-grey-rgb),0.1), 0 2px 20px rgba(var(--color-grey-rgb),0.1);
+}
+
+ul.project-list > li h2 {
+  font-size: 2.65rem;
+  margin-bottom: 0.25em;
+}
+
+@media (max-width: 1000px) {
+  ul.project-list {
+    grid-template-columns: 1fr;
+  }
+}

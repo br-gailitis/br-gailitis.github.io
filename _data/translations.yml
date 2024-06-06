@@ -6,6 +6,9 @@ ui:
   menu:
     en: Menu
     lv: Izvēlne
+  readMore:
+    en: Read more
+    lv: Lasiet vairāk
 form:
   firstName:
     en: First Name

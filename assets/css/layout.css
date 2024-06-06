@@ -1,21 +1,39 @@
 @import url("layout/hero.css");
 @import url("layout/navbar.css");
+@import url("layout/project-list.css");
 
+
+
+header.page-header,
 section {
   padding: 2rem;
+}
+
+header.page-header {
+  padding-top: 4rem;
+}
+
+.container {
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+header.page-header,
+header.page-header > .container,
+section,
+section > .container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-section h1 {
+.page-title {
   font-size: 3.75rem;
 }
 
 @media (max-width: 1000px) {
-  section h1 {
+  .page-title {
     font-size: 2.65rem;
   }
 }

@@ -3,6 +3,7 @@
 html {
   font: var(--font-base);
   color: var(--color-fg);
+  background-color: var(--color-bg-muted);
 }
 
 * {
@@ -21,3 +22,6 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+p {
+  line-height: 1.5;
+}
