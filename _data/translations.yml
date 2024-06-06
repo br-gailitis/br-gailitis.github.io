@@ -1,3 +1,7 @@
+ui:
+  menu:
+    en: Menu
+    lv: Izvēlne
 form:
   firstName:
     en: First Name
@@ -39,5 +43,5 @@ form:
     en: Optional
     lv: Nav obligāts
   success:
-    en: Great success!
-    lv: Malacis!
+    en: Thanks! Your message has been received.
+    lv: Paldies! Jūsu ziņa ir saņemts.

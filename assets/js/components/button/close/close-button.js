@@ -1,6 +1,6 @@
 import {LitElement, html, css} from 'lit';
 
-export class ButtonClose extends LitElement {
+export class CloseButton extends LitElement {
 
   static styles = [
     css`

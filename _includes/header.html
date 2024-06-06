@@ -2,7 +2,7 @@
 <header class="header-nav">
   <bg-navbar logo="/assets/img/bg-logo.svg" home="{{ site.data.menu[page.lang].home.url }}">
     <h1 slot="title">B. Gailītis</h1>
-    <button slot="trigger" class="hamburger">Menu</button>
+    <span slot="trigger">{{ site.data.translations.ui.menu[page.lang] }}</span>
     <nav slot="menu">
       <bg-navbar-menu>
         {% for item in site.data.menu[page.lang] %}

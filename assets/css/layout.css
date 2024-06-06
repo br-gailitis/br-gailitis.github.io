@@ -34,9 +34,3 @@ header.header-nav {
   padding: 1rem 2rem;
   background-color: white;
 }
-
-button.hamburger {
-  border: 0;
-  background: none;
-  font: var(--font-base);
-}

@@ -56,7 +56,7 @@ export class NavigationBar extends LitElement {
         background-color: var(--color-bg);
       }
 
-      bg-button-close {
+      bg-close-button {
         position: absolute;
         top: 1rem;
         right: 1rem;
@@ -86,11 +86,24 @@ export class NavigationBar extends LitElement {
   }
 
   openMenu() {
-    this.#menuRef.value.showModal()
+    const menu = this.#menuRef.value;
+    menu.showModal();
+    menu.animate(
+      [
+        { transform: "translateX(min(var(--nav-menu-width), 100vw))" },
+        { transform: "translateX(0)" }
+      ],
+      { duration: 300, easing: "ease-in-out" }
+    );
   }
 
   closeMenu() {
-    this.#menuRef.value.close();
+    const menu = this.#menuRef.value;
+    const animation = menu.animate(
+      [{ transform: "translateX(min(var(--nav-menu-width), 100vw))" }],
+      { duration: 300, easing: "ease-in-out" }
+    );
+    animation.onfinish = () => menu.close();
   }
 
   handleDialogClick(event) {
@@ -100,10 +113,12 @@ export class NavigationBar extends LitElement {
   render() {
 
     const menu = html`
-      <slot name="trigger" @click="${this.openMenu}"></slot>
+      <bg-menu-button @click="${this.openMenu}">
+        <slot name="trigger"></slot>
+      </bg-menu-button>
       <dialog @click="${this.handleDialogClick}" ${ref(this.#menuRef)}>
         <slot name="menu"></slot>
-        <bg-button-close @click="${this.closeMenu}">Close</bg-button-close>
+        <bg-close-button @click="${this.closeMenu}">Close</bg-close-button>
       </dialog>
     `;
 
