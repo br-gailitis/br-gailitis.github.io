@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<ul>
+  {% assign projects = site.projects | where: "lang", page.lang %}
+
+  {% for project in projects %}
+    <li>
+      <a href="{{ project.url }}">{{ project.name }}</a>
+    </li>
+  {% endfor %}
+</ul>

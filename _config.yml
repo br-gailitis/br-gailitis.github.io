@@ -24,6 +24,18 @@ description: B. Gailit UI/UX developer & manager
 domain: bgailitis.github.io
 url: https://bgailitis.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
+permalink: pretty
+collections:
+  projects:
+    output: true
+    permalink: /:path
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
 # github_username:  jekyll
 
 # Build settings
