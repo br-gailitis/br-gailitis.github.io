@@ -13,13 +13,13 @@ en:
     url: /en/contact/
 lv:
   home:
-    name: Mājas
+    name: Sākums
     url: /lv/
   work:
     name: Projekti
     url: /lv/projects/
   about:
-    name: Par Broku
+    name: Par mani
     url: /lv/about/
   contact:
     name: Sazinieties
