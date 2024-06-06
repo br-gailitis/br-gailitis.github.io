@@ -1,0 +1,40 @@
+
+header.navbar {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  padding: 1rem 2rem;
+  background-color: white;
+}
+
+.navbar-menu a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-fg);
+}
+
+.navbar-menu a:hover {
+  opacity: 0.8;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .navbar-menu {
+    padding-top: 3rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .navbar-menu {
+    flex-direction: row;
+  }
+}

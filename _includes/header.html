@@ -1,17 +1,15 @@
 
-<header class="header-nav">
+<header class="navbar">
   <bg-navbar logo="/assets/img/bg-logo.svg" home="{{ site.data.menu[page.lang].home.url }}">
     <h1 slot="title">{{ site.data.translations.brand.name[page.lang] }}</h1>
     <span slot="trigger">{{ site.data.translations.ui.menu[page.lang] }}</span>
-    <nav slot="menu">
-      <bg-navbar-menu>
+    <nav slot="menu" class="navbar-menu">
         {% for item in site.data.menu[page.lang] %}
         {% if item[1].topnav != false %}
         <a href="{{ item[1].url }}">{{ item[1].name }}</a>
         {% endif %}
         {% endfor %}
         <bg-language-select languages='["lv","en"]'></bg-language-select>
-      </bg-navbar-menu>
     </nav>
   </bg-navbar>
 </header>

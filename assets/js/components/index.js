@@ -1,5 +1,4 @@
 import { NavigationBar } from "./navigation/navbar.js";
-import { NavigationBarMenu } from "./navigation/navbar-menu.js";
 import { HeroSection } from "./hero/hero.js";
 import { CloseButton } from "./button/close/close-button.js"
 import { MenuButton } from "./button/menu/menu-button.js"
@@ -8,7 +7,6 @@ import { ContactForm } from "./form/contact-form.js";
 import { Icon } from "./icon/icon.js";
 
 window.customElements.define('bg-navbar', NavigationBar);
-window.customElements.define('bg-navbar-menu', NavigationBarMenu);
 window.customElements.define('bg-hero', HeroSection);
 window.customElements.define('bg-close-button', CloseButton);
 window.customElements.define('bg-menu-button', MenuButton);

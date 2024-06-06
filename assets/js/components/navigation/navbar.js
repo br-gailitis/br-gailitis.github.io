@@ -6,7 +6,7 @@ export class NavigationBar extends LitElement {
 
   #menuRef = createRef();
 
-  #mqSmall = new MediaQueryController(this, "(max-width: 1000px)");
+  #mqSmall = new MediaQueryController(this, "(max-width: 1200px)");
 
   static styles = [
     css`
